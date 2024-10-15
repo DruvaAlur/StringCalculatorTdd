@@ -31,3 +31,7 @@ test('returns 2 for "2,1001"', () => {
 test('returns 6 for "//[***]\\n1***2***3"', () => {
   expect(add("//[***]\n1***2***3")).toBe(6);
 });
+
+test('returns 6 for "//[*][%]\\n1*2%3"', () => {
+  expect(add("//[*][%]\n1*2%3")).toBe(6);
+});
