@@ -41,4 +41,5 @@ function add(numbers) {
 
   return nums.reduce((sum, num) => (num <= 1000 ? sum + num : sum), 0);
 }
+
 module.exports = { add };
