@@ -8,12 +8,13 @@ function add(numbers) {
 
     nums.forEach((num) => {
       if (num < 0) negatives.push(num);
+      if (num <= 1000) return num;
     });
 
     if (negatives.length > 0)
       throw new Error(`negative numbers not allowed: ${negatives.join(", ")}`);
 
-    return nums.reduce((sum, num) => sum + num, 0);
+    return nums.reduce((sum, num) => (num <= 1000 ? sum + num : sum), 0);
   }
 
   if (numbers === "") return 0;
@@ -27,6 +28,6 @@ function add(numbers) {
   if (negatives.length > 0)
     throw new Error(`negative numbers not allowed: ${negatives.join(", ")}`);
 
-  return nums.reduce((sum, num) => sum + num, 0);
+  return nums.reduce((sum, num) => (num <= 1000 ? sum + num : sum), 0);
 }
 module.exports = { add };
