@@ -27,3 +27,7 @@ test("throws error for negative numbers", () => {
 test('returns 2 for "2,1001"', () => {
   expect(add("2,1001")).toBe(2);
 });
+
+test('returns 6 for "//[***]\\n1***2***3"', () => {
+  expect(add("//[***]\n1***2***3")).toBe(6);
+});
